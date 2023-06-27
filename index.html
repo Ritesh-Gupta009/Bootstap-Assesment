@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="date" name="" id="d1"><br><br>
+    <input type="date" name="" id="d2"><br><br>
+    <button onclick="calculateDays()"> Get Caluculate </button>
+    <p id="output"></p>
+</body>
+
+        <script>
+            function calculateDays(){
+         var d1= document.getElementById("d1").value;
+         var d2 = document.getElementById("d2").value;
+
+         const dateOne = new Date(d1);
+         const dateTwo = new Date(d2);
+         const time = Math.abs(dateTwo -  dateOne);
+         const days = Math.ceil(time/(1000*60*60*24));
+         const monts = Math.ceil(time/(1000*60*60*24));
+         document.getElementById("output").innerHTML=days;
+         document.getElementById("output").innerHTML=months;
+            }
+        </script>
+</html>
